@@ -1,0 +1,16 @@
+spring:
+  cloud:
+    stream:
+      bindings:
+        supply-out-0:
+          destination: "testQueue"
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include:
+          - bindings
+          - channels
